@@ -19,6 +19,23 @@ Instalar Angular
         ng generate module modulos/administracion --routing
         ng generate module modulos/rentas --routing
 
+    6. Crear Componentes
+
+        Modulo Seguridad
+            ng g c modulos/seguridad/identificacion
+            ng g c modulos/seguridad/cambio-clave
+            ng g c modulos/seguridad/recuperar-clave
+        
+        Modulo Administracion
+            ng g c modulos/administracion/cliente
+            ng g c modulos/administracion/asesor
+            ng g c modulos/administracion/administrador
+            ng g c modulos/administracion/vehiculo
+            
+        
+        Modulo Rentas
+            ng g c modulos/rentas/realizar-solicitud
+
 
 
 
