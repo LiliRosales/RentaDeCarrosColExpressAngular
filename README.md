@@ -45,6 +45,8 @@ Instalar Angular
         <router-outlet></router-outlet>
         <app-footer></app-footer>
 
+    9. Instalar materialize
+        npm install materialize-css@next
 
 
 
