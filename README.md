@@ -36,6 +36,15 @@ Instalar Angular
         Modulo Rentas
             ng g c modulos/rentas/realizar-solicitud
 
+    7. Creacion de plantillas
+        ng g c plantillas/banner-navegacion
+        ng g c plantillas/footer
+
+    8. Editamos app.component.html de app para agregar los componentes de las plantillas
+        <app-banner-navegacion></app-banner-navegacion>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+
 
 
 
