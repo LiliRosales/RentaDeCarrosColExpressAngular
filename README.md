@@ -1,5 +1,27 @@
 # RentaDeCarrosColExpress
 
+Instalar Angular
+
+    1. Visitar https://angular.io/guide/setup-local
+
+    2. Instalar en Visual studio:
+        npm install -g @angular/cli
+
+    3. Crear la aplicacion con el Nombre "RentaDeCarrosColExpressAngular"
+        ng new RentaDeCarrosColExpressAngular
+
+    4. Para ejecutar:
+        ng server -open
+        ng s -o
+
+    5. Crear Modulos
+        ng generate module modulos/seguridad --routing
+        ng generate module modulos/administracion --routing
+        ng generate module modulos/rentas --routing
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
 ## Development server
