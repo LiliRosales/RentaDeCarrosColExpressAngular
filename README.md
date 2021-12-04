@@ -25,7 +25,6 @@ Instalar Angular
             ng g c modulos/seguridad/identificacion
             ng g c modulos/seguridad/cambio-clave
             ng g c modulos/seguridad/recuperar-clave
-
         
         Modulo Administracion
             ng g c modulos/administracion/cliente
