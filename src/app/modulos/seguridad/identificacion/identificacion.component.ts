@@ -27,6 +27,6 @@ export class IdentificacionComponent implements OnInit {
   Identificaradministrador(){
     let administrador =this.fgValidador.controls["administrador"].value;
     let clave = this.fgValidador.controls["clave"].value;
-    let claveCifrada = CryptoJS.MD5(clave).toString();
+    //let claveCifrada = CryptoJS.MD5(clave).toString();
   }
 }
