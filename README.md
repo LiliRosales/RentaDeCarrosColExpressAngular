@@ -1,53 +1,52 @@
 # RentaDeCarrosColExpress
 
-Instalar  Angular 
+Instalar Angular
 
-   1 Visitar https://angular.io/guide/setup-local
+    1. Visitar https://angular.io/guide/setup-local
 
-   2 Instalar en visual studio code:
+    2. Instalar en Visual studio:
         npm install -g @angular/cli
 
-   3 Crear la Aplicacion con el Nombre "RentaDeCarrosColExpressAngular"
-        ng new  RentaDeCarrosColExpressAngular
+    3. Crear la aplicacion con el Nombre "RentaDeCarrosColExpressAngular"
+        ng new RentaDeCarrosColExpressAngular
 
-    4.Para Ejecutar:
+    4. Para ejecutar:
         ng server -open
-        ng s -o 
+        ng s -o
 
     5. Crear Modulos
         ng generate module modulos/seguridad --routing
         ng generate module modulos/administracion --routing
-        ng generate module modulos/rentas --routing 
-    
-    6 Crear Componentes
+        ng generate module modulos/rentas --routing
 
-        Modulos seguridad
-        ng g c modulos/seguridad/identificacion
-        ng g c modulos/seguridad/cambio-clave
-        ng g c modulos/seguridad/recuperar-clave
+    6. Crear Componentes
 
-        Modulos Administracion
-        ng g c modulos/administracion/cliente
-        ng g c modulos/administracion/asesor
-        ng g c modulos/administracion/administrador
-        ng g c modulos/administracion/vehiculo
-       
+        Modulo Seguridad
+            ng g c modulos/seguridad/identificacion
+            ng g c modulos/seguridad/cambio-clave
+            ng g c modulos/seguridad/recuperar-clave
+        
+        Modulo Administracion
+            ng g c modulos/administracion/cliente
+            ng g c modulos/administracion/asesor
+            ng g c modulos/administracion/administrador
+            ng g c modulos/administracion/vehiculo
+            
+        
+        Modulo Rentas
+            ng g c modulos/rentas/realizar-solicitud
 
-        Modulos Rentas
-        ng g c modulos/rentas/realizar-solicitud
-
-    7 Creacion plantillas
+    7. Creacion de plantillas
         ng g c plantillas/banner-navegacion
         ng g c plantillas/footer
-    
-    8 Editamos  app.component.html de App para agregar los componentes de las plantillas 
-    <app-banner-navegacion></app-banner-navegacion>
-    <router-outlet></router-outlet>
-    <app footer></app-footer>
 
-    9 Instalar materialize
-    npm install materialize-css@next
-        
+    8. Editamos app.component.html de app para agregar los componentes de las plantillas
+        <app-banner-navegacion></app-banner-navegacion>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+
+    9. Instalar materialize
+        npm install materialize-css@next
 
 
 
