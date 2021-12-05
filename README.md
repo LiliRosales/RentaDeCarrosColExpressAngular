@@ -1,5 +1,56 @@
 # RentaDeCarrosColExpress
 
+Instalar  Angular 
+
+   1 Visitar https://angular.io/guide/setup-local
+
+   2 Instalar en visual studio code:
+        npm install -g @angular/cli
+
+   3 Crear la Aplicacion con el Nombre "RentaDeCarrosColExpressAngular"
+        ng new  RentaDeCarrosColExpressAngular
+
+    4.Para Ejecutar:
+        ng server -open
+        ng s -o 
+
+    5. Crear Modulos
+        ng generate module modulos/seguridad --routing
+        ng generate module modulos/administracion --routing
+        ng generate module modulos/rentas --routing 
+    
+    6 Crear Componentes
+
+        Modulos seguridad
+        ng g c modulos/seguridad/identificacion
+        ng g c modulos/seguridad/cambio-clave
+        ng g c modulos/seguridad/recuperar-clave
+
+        Modulos Administracion
+        ng g c modulos/administracion/cliente
+        ng g c modulos/administracion/asesor
+        ng g c modulos/administracion/administrador
+        ng g c modulos/administracion/vehiculo
+       
+
+        Modulos Rentas
+        ng g c modulos/rentas/realizar-solicitud
+
+    7 Creacion plantillas
+        ng g c plantillas/banner-navegacion
+        ng g c plantillas/footer
+    
+    8 Editamos  app.component.html de App para agregar los componentes de las plantillas 
+    <app-banner-navegacion></app-banner-navegacion>
+    <router-outlet></router-outlet>
+    <app footer></app-footer>
+
+    9 Instalar materialize
+    npm install materialize-css@next
+        
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
 ## Development server
