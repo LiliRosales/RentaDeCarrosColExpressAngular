@@ -36,6 +36,7 @@ export class SeguridadService {
   }
   AlmacenarSesionadmin(datos:ModeloIdentifica){
     datos.estaidentificado=true;
+    datos.aministrador=true;
     let stringDatos=JSON.stringify(datos);
     localStorage.setItem("datosSesion",stringDatos);
     this.RefrecarDatosSesion(datos);
@@ -62,4 +63,39 @@ export class SeguridadService {
     return this.datosUsuarioenSesion.asObservable();
   }
   
+  //asesor
+  Identificarasesor(usuario:string, clave:string):Observable<ModeloIdentifica>{
+    return this.http.post<ModeloIdentifica>(`${this.url}/identificarasesor`,{
+      usuario:usuario,
+      clave:clave
+    },{headers: new HttpHeaders({
+
+      })
+    })
+  }
+  AlmacenarSesionasesor(datos:ModeloIdentifica){
+    datos.estaidentificado=true;
+    datos.asesor=true;
+    let stringDatos=JSON.stringify(datos);
+    localStorage.setItem("datosSesion",stringDatos);
+    this.RefrecarDatosSesion(datos);
+  }
+  //Cliente
+  Identificarcliente(usuario:string, clave:string):Observable<ModeloIdentifica>{
+    return this.http.post<ModeloIdentifica>(`${this.url}/identificarcliente`,{
+      usuario:usuario,
+      clave:clave
+    },{headers: new HttpHeaders({
+
+      })
+    })
+  }
+  AlmacenarSesioncliente(datos:ModeloIdentifica){
+    datos.estaidentificado=true;
+    datos.cliente=true;
+    let stringDatos=JSON.stringify(datos);
+    localStorage.setItem("datosSesion",stringDatos);
+    this.RefrecarDatosSesion(datos);
+  }
 }
+

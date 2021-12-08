@@ -4,16 +4,16 @@
         <div class="card-content">
   <div class="col s12 m6 l4 z-depth-4 card-panel border-radius-6 login-card bg-opacity-8">
 
-<form [formGroup]="fgValidador" (ngSubmit)="Identificaradministrador()">
+<form [formGroup]="fgValidador" (ngSubmit)="Identificarasesor()">
       <div class="row">
         <div class="input-field col s12">
-          <h5 class="ml-4">Iniciar Sesión Administrador </h5>
+          <h5 class="ml-4">Iniciar Sesión Asesor</h5>
         </div>
       </div>
       <div class="row margin">
         <div class="input-field col s12">
           <i class="material-icons prefix pt-2">mail_outline</i>
-          <input formControlName="administrador" id="email" type="email" class="validate">
+          <input formControlName="asesor" id="email" type="email" class="validate">
           <label for="email" class="center-align">Email</label>
         </div>
       </div>
@@ -39,7 +39,7 @@
           </p>
         </div>
         <div class="input-field col s6 m6 l6">
-          <p class="margin medium-small"><a routerLink="/seguridad/identificar-asesor">Inicia sesion como asesor</a>
+          <p class="margin medium-small"><a routerLink="/seguridad/identificar">Inicia sesion como administrador</a>
           </p>
         </div>
         <div class="input-field col s6 m6 l6">
@@ -53,4 +53,3 @@
 </div>
 </div>
 </div>
-

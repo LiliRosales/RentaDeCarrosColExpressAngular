@@ -20,7 +20,8 @@ export class IdentificacionComponent implements OnInit {
     'clave':['',[Validators.required]]
 
   });
-  constructor(private fb: FormBuilder,private servicioseguridad:SeguridadService,
+  constructor(private fb: FormBuilder,
+    private servicioseguridad:SeguridadService,
     private router:Router
     ) { }
     //private servicioSeguridad: SeguridadService
