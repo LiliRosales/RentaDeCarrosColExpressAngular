@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs/internal/Subscription';
+import { SeguridadService } from 'src/app/servicios/seguridad.service';
+import { ModeloIdentifica } from 'src/modelos/identificar.modelo';
 
 @Component({
   selector: 'app-banner-navegacion',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerNavegacionComponent implements OnInit {
 
-  constructor() { }
+  SeInicioSesion:boolean = false;
+  sub:Subscription=new Subscription();
+  constructor(private seguridadservicio:SeguridadService) { }
 
   ngOnInit(): void {
+    this.sub=this.seguridadservicio.ObtenerDatosUsuarioEnSesion().subscribe((datos:ModeloIdentifica)=>{
+      this.SeInicioSesion=datos.estaidentificado;
+    });
   }
 
 }
