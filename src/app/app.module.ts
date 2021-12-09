@@ -7,6 +7,7 @@ import { BannerNavegacionComponent } from './plantillas/banner-navegacion/banner
 import { FooterComponent } from './plantillas/footer/footer.component';
 import { InicioComponent } from './plantillas/inicio/inicio.component';
 import { ErrorComponent } from './plantillas/error/error.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ErrorComponent } from './plantillas/error/error.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

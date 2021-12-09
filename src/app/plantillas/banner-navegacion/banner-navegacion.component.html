@@ -4,21 +4,23 @@
       <a routerLink="/inicio" class="brand-logo">Renta de Carros Col Express</a>
       <a routerLink="/inicio" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a routerLink="/administracion/administrador">Administrador</a></li>
-        <li><a routerLink="/administracion/asesor">Asesor</a></li>
-        <li><a routerLink="/administracion/cliente">Cliente</a></li>
-        <li><a routerLink="/administracion/vehiculo">Vehiculos</a></li>
-        <li><a routerLink="/seguridad/cambio-clave">Cambiar clave</a></li>
-        <li><a routerLink="/seguridad/identificar">Inicio sesion</a></li>
+        <li *ngIf="SeInicioSesion"><a routerLink="/administracion/administrador">Administrador</a></li>
+        <li *ngIf="SeInicioSesion"><a routerLink="/administracion/asesor">Asesor</a></li>
+        <li *ngIf="SeInicioSesion || SeInicioSesionasesor"><a routerLink="/administracion/cliente">Cliente</a></li>
+        <li *ngIf="SeInicioSesion  || SeInicioSesionasesor || SeInicioSesionCliente"><a routerLink="/administracion/vehiculo">Vehiculos</a></li>
+        <li *ngIf="SeInicioSesion || SeInicioSesionasesor || SeInicioSesionCliente"><a routerLink="/seguridad/cambio-clave">Cambiar clave</a></li>
+        <li *ngIf="SeInicioSesion || SeInicioSesionasesor || SeInicioSesionCliente"><a routerLink="/seguridad/cerrar-sesion">Cerrar sesion</a></li>
+        <li *ngIf="!SeInicioSesion && !SeInicioSesionasesor && !SeInicioSesionCliente"><a routerLink="/seguridad/identificar-cliente">Inicio sesion</a></li>
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
     <li><a routerLink="/administracion/administrador">Administrador</a></li>
-        <li><a routerLink="/administracion/asesor">Asesor</a></li>
-        <li><a routerLink="/administracion/cliente">Cliente</a></li>
-        <li><a routerLink="/administracion/vehiculo">Vehiculos</a></li>
-        <li><a routerLink="/seguridad/cambio-clave">Cambiar clave</a></li>
-        <li><a routerLink="/seguridad/identificar">Inicio sesion</a></li>
+        <li *ngIf="SeInicioSesion"><a routerLink="/administracion/asesor">Asesor</a></li>
+        <li *ngIf="SeInicioSesion"><a routerLink="/administracion/cliente">Cliente</a></li>
+        <li *ngIf="SeInicioSesion"><a routerLink="/administracion/vehiculo">Vehiculos</a></li>
+        <li *ngIf="SeInicioSesion"><a routerLink="/seguridad/cambio-clave">Cambiar clave</a></li>
+        <li *ngIf="SeInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar sesion</a></li>
+        <li *ngIf="!SeInicioSesion"><a routerLink="/seguridad/identificar">Inicio sesion</a></li>
   </ul>
