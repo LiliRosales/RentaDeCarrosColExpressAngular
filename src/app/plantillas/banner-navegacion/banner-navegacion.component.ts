@@ -32,6 +32,7 @@ export class BannerNavegacionComponent implements OnInit {
       if (datos.aministrador==false && datos.asesor==false && datos.cliente==false){
         this.SeInicioSesion=datos.estaidentificado;
         this.SeInicioSesionasesor=datos.estaidentificado;
+        this.SeInicioSesionCliente=datos.estaidentificado;
       }
     });
   }
