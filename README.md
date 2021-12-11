@@ -48,6 +48,10 @@ Instalar Angular
     9. Instalar materialize
         npm install materialize-css@next
 
+    10. Instalar librerias crypto
+        npm i cryptoj
+        npm i @types/crypto-js
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
