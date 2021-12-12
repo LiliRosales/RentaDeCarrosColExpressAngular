@@ -22,6 +22,7 @@ import { CrearVehiculoComponent } from './vehiculo/crear-vehiculo/crear-vehiculo
 import { BuscarVehiculoComponent } from './vehiculo/buscar-vehiculo/buscar-vehiculo.component';
 import { EditarVehiculoComponent } from './vehiculo/editar-vehiculo/editar-vehiculo.component';
 import { EliminarVehiculoComponent } from './vehiculo/eliminar-vehiculo/eliminar-vehiculo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -49,7 +50,9 @@ import { EliminarVehiculoComponent } from './vehiculo/eliminar-vehiculo/eliminar
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class AdministracionModule { }
