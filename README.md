@@ -49,8 +49,13 @@ Instalar Angular
         npm install materialize-css@next
 
     10. Instalar librerias crypto
-        npm i cryptoj
-        npm i @types/crypto-js
+        npm install crypto-js --save
+        npm install @types/crypto-js --save-dev
+
+        se importa de alguna de estas dos formas:
+
+        import * as CryptoJS from 'crypto-js';
+        import CryptoJS = require('crypto-js);
 
 
 
