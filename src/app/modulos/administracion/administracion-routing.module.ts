@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BuscarAdministradorComponent } from './administrador/buscar-administrador/buscar-administrador.component';
 import { CrearAdministradorComponent } from './administrador/crear-administrador/crear-administrador.component';
@@ -12,10 +12,14 @@ import { BuscarClienteComponent } from './cliente/buscar-cliente/buscar-cliente.
 import { CrearClienteComponent } from './cliente/crear-cliente/crear-cliente.component';
 import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
 import { EliminarClienteComponent } from './cliente/eliminar-cliente/eliminar-cliente.component';
+import { BuscarSolicitudComponent } from './Solicitud/buscar-solicitud/buscar-solicitud.component';
+import { CrearSolicitudComponent } from './Solicitud/crear-solicitud/crear-solicitud.component';
+import { EditarSolicitudComponent } from './Solicitud/editar-solicitud/editar-solicitud.component';
 import { BuscarVehiculoComponent } from './vehiculo/buscar-vehiculo/buscar-vehiculo.component';
 import { CrearVehiculoComponent } from './vehiculo/crear-vehiculo/crear-vehiculo.component';
 import { EditarVehiculoComponent } from './vehiculo/editar-vehiculo/editar-vehiculo.component';
 import { EliminarVehiculoComponent } from './vehiculo/eliminar-vehiculo/eliminar-vehiculo.component';
+
 
 const routes: Routes = [
 
@@ -90,6 +94,25 @@ const routes: Routes = [
     path: 'eliminar-vehiculo',
     component: EliminarVehiculoComponent
   },
+
+ //Alquiler 
+ {
+   path: 'crear-solicitud',
+   component: CrearSolicitudComponent
+ },
+{
+  path: 'buscar-solicitud',
+  component: BuscarSolicitudComponent
+},
+{
+  path: 'editar-solicitud',
+  component:EditarSolicitudComponent,
+},
+{
+  path: ' eliminar-solicitud',
+  component: EliminarVehiculoComponent,
+},
+
 ];
 
 @NgModule({
