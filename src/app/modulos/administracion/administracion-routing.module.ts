@@ -47,17 +47,18 @@ const routes: Routes = [
     component: CrearAsesorComponent
   },
   {
-    path: 'buscar-asesor',
+    path: 'listar-asesor',
     component: BuscarAsesorComponent
   },
   {
-    path: 'editar-asesor',
+    path: 'editar-asesor/:id',
     component: EditarAsesorComponent
   },
   {
-    path: 'eliminar-asesor',
+    path: 'eliminar-asesor/:id',
     component: EliminarAsesorComponent
   },
+  
 
   //Cliente
   {
@@ -69,11 +70,11 @@ const routes: Routes = [
     component: BuscarClienteComponent
   },
   {
-    path: 'editar-cliente',
+    path: 'editar-cliente/:id',
     component: EditarClienteComponent
   },
   {
-    path: 'eliminar-cliente',
+    path: 'eliminar-cliente/:id',
     component: EliminarClienteComponent
   },
 
@@ -83,15 +84,15 @@ const routes: Routes = [
     component: CrearVehiculoComponent
   },
   {
-    path: 'buscar-vehiculo',
+    path: 'listar-vehiculo',
     component: BuscarVehiculoComponent
   },
   {
-    path: 'editar-vehiculo',
+    path: 'editar-vehiculo/:id',
     component: EditarVehiculoComponent
   },
   {
-    path: 'eliminar-vehiculo',
+    path: 'eliminar-vehiculo/:id',
     component: EliminarVehiculoComponent
   },
 
