@@ -62,6 +62,16 @@ export class SeguridadService {
   ObtenerDatosUsuarioEnSesion(){
     return this.datosUsuarioenSesion.asObservable();
   }
+
+  ObtenerToken(){
+    let datosString=localStorage.getItem("datosSesion");
+    if (datosString) {
+      let datos=JSON.parse(datosString);
+      return datos.tk;
+    }else{
+      return '';
+    }
+  }
   
   //asesor
   Identificarasesor(usuario:string, clave:string):Observable<ModeloIdentifica>{
