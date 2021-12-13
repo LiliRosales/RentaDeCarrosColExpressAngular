@@ -1,1 +1,31 @@
-<p>editar-asesor works!</p>
+<div class="row">
+    <article class="col s6 offset-s3">
+        <h3 class="center-aling">Actualizar Asesor</h3>
+    
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarAsesor()">
+            <input type="hidden" FormControlName="id"/>
+            <div class="input-field">
+                <label for="nombre" class="active">Nombre</label>
+                <input formControlName="nombre" type="text" name="nombre" required>
+            </div>
+            <div class="input-field">
+                <label for="email" class="active">Email</label>
+                <input formControlName="email" type="text" name="email" required>
+            </div>
+            <div class="input-field">
+                <label for="telefono" class="active">Telefono</label>
+                <input formControlName="telefono" type="text" name="telefono" required>
+            </div>
+            <div class="input-field">
+                <label for="estado" class="active">Estado</label>
+                <input formControlName="estado" type="number" name="estado" required>
+            </div>
+            <div class="input-field">
+                <p class="center">
+                    <button [disabled]="!fgValidador.valid" type="submit" class="waves-effect waves-light btn">
+                        <i class="material-icons right">send</i>Enviar</button>
+                </p>
+            </div>
+        </form>
+    </article>
+</div>

@@ -1,1 +1,45 @@
-<p>buscar-asesor works!</p>
+<a routerLink="/administracion/crear-asesor" class="btn">Nuevo Asesor</a>
+
+<table class="responsive">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Telefono
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                Editar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadodeRegistros">
+            <td>
+                {{p.nombre}}
+            </td>
+            <td>
+                {{p.email}}
+            </td>
+            <td>
+                {{p.telefono}}
+            </td>
+            <td>
+                {{p.estado}}
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-asesor/{{p.id}}" class="btn">Editar Asesor</a>
+            </td>
+            <td>
+                <a routerLink="/administracion/eliminar-asesor/{{p.id}}" class="btn">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -107,5 +107,25 @@ export class SeguridadService {
     localStorage.setItem("datosSesion",stringDatos);
     this.RefrecarDatosSesion(datos);
   }
+  //obtener Token 
+  ObtenerToken(){
+    let datosString=localStorage.getItem("datosSesion");
+    if (datosString) {
+      let datos=JSON.parse(datosString);
+      return datos.tk;
+    }else{
+      return '';
+    }
+  }
+  //obtener id de la sesion
+  ObtenerIdSesion(){
+    let datosString=localStorage.getItem("datosSesion");
+    if (datosString) {
+      let datos=JSON.parse(datosString);
+      return datos.datos.id;
+    }else{
+      return '';
+    }
+  }
 }
 

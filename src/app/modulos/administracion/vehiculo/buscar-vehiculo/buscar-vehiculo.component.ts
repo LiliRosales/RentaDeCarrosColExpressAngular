@@ -14,11 +14,9 @@ export class BuscarVehiculoComponent implements OnInit {
   ngOnInit(): void {
     this.ObtenerListaVehiculos()
   }
-
   ObtenerListaVehiculos(){
     this.servicioVehiculo.ObtenerRegistros().subscribe((datos:ModeloVehiculo[]) =>{
       this.listadodeRegistros=datos;
     })
   }
-
 }
