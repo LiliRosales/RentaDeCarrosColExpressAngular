@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BuscarAdministradorComponent } from './administrador/buscar-administrador/buscar-administrador.component';
 import { CrearAdministradorComponent } from './administrador/crear-administrador/crear-administrador.component';
@@ -84,9 +84,14 @@ const routes: Routes = [
     component: BuscarVehiculoComponent
   },
   {
+    path: 'buscar-vehiculo/:id',
+    component: BuscarVehiculoComponent
+  },
+  {
     path: 'editar-vehiculo/:id',
     component: EditarVehiculoComponent
   },
+
   {
     path: 'eliminar-vehiculo/:id',
     component: EliminarVehiculoComponent
