@@ -1,1 +1,31 @@
 <p>editar-solicitud works!</p>
+<div class="row">
+    <h3 class="center-aling">Editar Solicitud</h3>
+    <article class="col s6 offset-s3">
+
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarSolicitud()">
+            <input type="hidden" frmControlName="id">
+            <div class="input-field">
+                <label for="id" class="active">id</label>
+                <input formControlName="id" type="text" name="id" required>
+            </div>
+            <div class="input-field">
+                <label for="fecha" class="active">Fecha</label>
+                <input formControlName="fecha" type="text" name="fecha" required>
+            </div>
+            <div class="input-field">
+                <label for="Valor" class="active">Valor</label>
+                <input formControlName="Valor" type="text" name="valor" required>
+            </div>
+            <div class="input-field">
+                <label for="tipo" class="active">Tipo</label>
+                <input formControlName="tipo" type="text" name="tipo" required>
+            </div>
+            <p class="center">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">send</i>Enviar
+                </button>
+            </p>
+        </form>
+    </article>
+</div>

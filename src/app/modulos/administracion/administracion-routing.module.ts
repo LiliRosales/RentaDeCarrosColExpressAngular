@@ -88,9 +88,14 @@ const routes: Routes = [
     component: BuscarVehiculoComponent
   },
   {
+    path: 'buscar-vehiculo/:id',
+    component: BuscarVehiculoComponent
+  },
+  {
     path: 'editar-vehiculo/:id',
     component: EditarVehiculoComponent
   },
+
   {
     path: 'eliminar-vehiculo/:id',
     component: EliminarVehiculoComponent
@@ -101,6 +106,10 @@ const routes: Routes = [
    path: 'crear-solicitud',
    component: CrearSolicitudComponent
  },
+ {
+  path: 'lista-alquiler',
+  component: CrearSolicitudComponent
+},
 {
   path: 'buscar-solicitud',
   component: BuscarSolicitudComponent

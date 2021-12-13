@@ -1,1 +1,38 @@
 <p>crear-solicitud works!</p>
+<div class="row">
+    <h3 class="center-aling">Crear Solicitud</h3>
+    <article class="col s6 offset-s3">
+
+        <form [formGroup]="fgValidador" (ngSubmit)="GuardarSolicitud()">
+            <div class="input-field">
+                <label for="guardar">GuardarSolicitud</label>
+                <input formControlName="guardar" type="text" name="guardar" required>
+            </div>
+            <div class="input-field">
+                <label for="Id">Id</label>
+                <input formControlName="Id" type="text" name="Id" required>
+            </div>
+            <div class="input-field">
+                <label for="fecha">fecha de Solicitud</label>
+                <input formControlName="fecha" type="text" name="fecha" required>
+            </div>
+            <div class="input-field">
+                <label for="estado">Estado de Solicitud</label>
+                <input formControlName="estado" type="text" name="estado" required>
+            </div>
+            <div class="input-field">
+                <label for="valor">Valor</label>
+                <input formControlName="valor" type="text" name="valor" required>
+            </div>
+            <div class="input-field">
+                <label for="tipo">Tipo de Solicitud</label>
+                <input formControlName="tipo" type="text" name="tipo" required>
+            </div>
+            <p class="center">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">send</i>Enviar
+                </button>
+            </p>
+        </form>
+    </article>
+</div>

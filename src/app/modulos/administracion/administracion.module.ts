@@ -2,10 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AdministracionRoutingModule } from './administracion-routing.module';
-//import { ClienteComponent } from './cliente/cliente.component';
-//import { AsesorComponent } from './asesor/asesor.component';
-//import { AdministradorComponent } from './administrador/administrador.component';
-//import { VehiculoComponent } from './vehiculo/vehiculo.component';
 import { CrearAdministradorComponent } from './administrador/crear-administrador/crear-administrador.component';
 import { BuscarAdministradorComponent } from './administrador/buscar-administrador/buscar-administrador.component';
 import { EditarAdministradorComponent } from './administrador/editar-administrador/editar-administrador.component';
@@ -31,10 +27,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    //ClienteComponent,
-    //AsesorComponent,
-    //AdministradorComponent,
-    //VehiculoComponent,
     CrearAdministradorComponent,
     BuscarAdministradorComponent,
     EditarAdministradorComponent,
@@ -60,7 +52,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AdministracionRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }

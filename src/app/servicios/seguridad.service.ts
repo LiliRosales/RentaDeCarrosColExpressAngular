@@ -62,6 +62,16 @@ export class SeguridadService {
   ObtenerDatosUsuarioEnSesion(){
     return this.datosUsuarioenSesion.asObservable();
   }
+
+  ObtenerToken(){
+    let datosString=localStorage.getItem("datosSesion");
+    if (datosString) {
+      let datos=JSON.parse(datosString);
+      return datos.tk;
+    }else{
+      return '';
+    }
+  }
   
   //asesor
   Identificarasesor(usuario:string, clave:string):Observable<ModeloIdentifica>{
@@ -97,16 +107,24 @@ export class SeguridadService {
     localStorage.setItem("datosSesion",stringDatos);
     this.RefrecarDatosSesion(datos);
   }
-  //obtener Token 
-  ObtenerToken(){
-    let datosString=localStorage.getItem("datosSesion");
-    if (datosString) {
-      let datos=JSON.parse(datosString);
-      return datos.tk;
-    }else{
-      return '';
-    }
-  }
+ //Solicitud
+ IdentificarSolicitud(usuario:string, clave:string):Observable<ModeloIdentifica>{
+  return this.http.post<ModeloIdentifica>(`${this.url}/identificarsolicitud`,{
+    usuario:usuario,
+    clave:clave
+  },{headers: new HttpHeaders({
+
+    })
+  })
+}
+Almacenarsolicitud(datos:ModeloIdentifica){
+  datos.estaidentificado=true;
+  datos.cliente=true;
+  let stringDatos=JSON.stringify(datos);
+  localStorage.setItem("datosSesion",stringDatos);
+  this.RefrecarDatosSesion(datos);
+}
+
   //obtener id de la sesion
   ObtenerIdSesion(){
     let datosString=localStorage.getItem("datosSesion");

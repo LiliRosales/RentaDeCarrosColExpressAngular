@@ -1,1 +1,45 @@
-<p>crear-vehiculo works!</p>
+<div class="row">
+    <h3 class="center-aling">Crear Vehiculo</h3>
+    <article class="col s6 offset-s3">
+
+        <form [formGroup]="fgValidador" (ngSubmit)="GuardarVehiculo()">
+            <div class="input-field">
+                <label for="tipo">Tipo</label>
+                <input formControlName="tipo" type="text" name="tipo" required>
+            </div>
+            <div class="input-field">
+                <label for="departamento">Departamento</label>
+                <input formControlName="departamento" type="text" name="departamento" required>
+            </div>
+            <div class="input-field">
+                <label for="ciudad">Ciudad</label>
+                <input formControlName="ciudad" type="text" name="ciudad" required>
+            </div>
+            <div class="input-field">
+                <label for="estado">Estado</label>
+                <input formControlName="estado" type="text" name="estado" required>
+            </div>
+            <div class="input-field">
+                <label for="detalles">Detalles</label>
+                <input formControlName="detalles" type="text" name="detalles" required>
+            </div>
+            <div class="input-field">
+                <label for="placa">Placa</label>
+                <input formControlName="placa" type="text" name="placa" required>
+            </div>
+            <div class="input-field">
+                <label for="color">Color</label>
+                <input formControlName="color" type="text" name="color" required>
+            </div>
+            <div class="input-field">
+                <label for="modelo">Modelo</label>
+                <input formControlName="modelo" type="text" name="modelo" required>
+            </div> 
+            <p class="center">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">send</i>Enviar
+                </button>
+            </p>
+        </form>
+    </article>
+</div>
