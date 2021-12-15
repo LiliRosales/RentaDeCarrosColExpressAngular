@@ -65,11 +65,15 @@ const routes: Routes = [
     component: BuscarClienteComponent
   },
   {
-    path: 'editar-cliente',
+    path: 'editar-cliente/:id',
     component: EditarClienteComponent
   },
   {
-    path: 'eliminar-cliente',
+    path: "listar-clientes",
+    component: BuscarClienteComponent
+  },
+  {
+    path: 'eliminar-cliente/:id',
     component: EliminarClienteComponent
   },
 

@@ -59,8 +59,23 @@ export class SeguridadService {
     let stringDatos=localStorage.getItem("datosSesion"); 
     return stringDatos;
   }
+  ObtenerToken(){
+    let datosString=localStorage.getItem("datosSesion");
+    if (datosString) {
+      let datos=JSON.parse(datosString);
+      return datos.tk;
+    }else{
+      return '';
+    }
+  }
   ObtenerDatosUsuarioEnSesion(){
-    return this.datosUsuarioenSesion.asObservable();
+    let datosString = localStorage.getItem("datosSesion");
+    if(datosString){
+      let datos = JSON.parse(datosString);
+      return datos.tk;
+    }else{
+      return '';
+    }
   }
   
   //asesor

@@ -1,1 +1,27 @@
-<p>crear-cliente works!</p>
+<div class="row">
+
+    <h3 class="center-aling">Registrar Cliente</h3>
+    <article>
+        <form [formGroup]="fgValidador" (ngSubmit)=" GuardarCliente()" method="post" action="formulario-contacto.php">
+            <div class="input-field">   
+                <label for="Documento">Documento</label>
+                <input formControlName="documento" type="text" name="documento" required>
+            </div>
+            <div class="input-field">   
+                <label for="Nombre">Nombre</label>
+                <input formControlName="nombre" type="text" name="nombre" required>
+            </div>
+            <div class="input-field">   
+                <label for="Email">Email</label>
+                <input formControlName="email" type="text" name="email" required>
+            </div>
+            <div class="input-field">   
+                <label for="Telefono">Telefono</label>
+                <input formControlName="telefono" type="text" name="telefono" required>
+            </div>
+            <p class="center-aling">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit"><i class="material.icons right">send</i></button>
+            </p>
+        </form>
+    </article>
+</div>
