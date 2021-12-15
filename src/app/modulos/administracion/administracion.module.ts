@@ -18,6 +18,10 @@ import { CrearVehiculoComponent } from './vehiculo/crear-vehiculo/crear-vehiculo
 import { BuscarVehiculoComponent } from './vehiculo/buscar-vehiculo/buscar-vehiculo.component';
 import { EditarVehiculoComponent } from './vehiculo/editar-vehiculo/editar-vehiculo.component';
 import { EliminarVehiculoComponent } from './vehiculo/eliminar-vehiculo/eliminar-vehiculo.component';
+import { CrearSolicitudComponent } from './Solicitud/crear-solicitud/crear-solicitud.component';
+import { BuscarSolicitudComponent } from './Solicitud/buscar-solicitud/buscar-solicitud.component';
+import { EditarSolicitudComponent } from './Solicitud/editar-solicitud/editar-solicitud.component';
+import { EliminarSolicitudComponent } from './Solicitud/eliminar-solicitud/eliminar-solicitud.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -39,7 +43,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BuscarVehiculoComponent,
     EditarVehiculoComponent,
     EliminarVehiculoComponent,
-  
+    CrearSolicitudComponent,
+    BuscarSolicitudComponent,
+    EditarSolicitudComponent,
+    EliminarSolicitudComponent
   ],
   imports: [
     CommonModule,

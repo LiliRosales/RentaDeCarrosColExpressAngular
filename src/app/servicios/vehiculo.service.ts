@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-=======
-import { HttpClient } from '@angular/common/http';
->>>>>>> 78cb21a3eda9cf9b400d1ac02f3e583f04ef78f0
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ModeloVehiculo } from 'src/modelos/vehiculo.modelo';
